@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Test apache-php-fpm-back role
+  hosts: all
 
   vars:
     php_enablerepo: "remi,remi-php56"
@@ -12,12 +13,13 @@
 
   pre_tasks:
     - name: Add repository for PHP 7.
-      apt_repository: repo='ppa:ondrej/php'
+      ansible.builtin.apt_repository:
+        repo: 'ppa:ondrej/php'
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version != '16.04'
 
   roles:
-    - role: geerlingguy.repo-remi
-      when: ansible_os_family == 'RedHat'
+#    - role: geerlingguy.repo-remi
+#      when: ansible_os_family == 'RedHat'
     - role: geerlingguy.apache
-    - role: geerlingguy.php
-    - role: role_under_test
+    # - role: geerlingguy.php
+    # - role: role_under_test

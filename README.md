@@ -17,8 +17,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   become: true
   gather_facts: true
 
-  roles:
-    - role: ansible-role-apache-php-fpm-back
+  # roles:
+  #   - role: buluma.apache_php_fpm_back
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
