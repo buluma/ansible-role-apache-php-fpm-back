@@ -1,14 +1,11 @@
 ---
-dependencies:
-  - geerlingguy.apache
 galaxy_info:
   author: geerlingguy
   role_name: apache_php_fpm_back
-  namespace: geerlingguy
-  description: Apache 2.4+ PHP-FPM support for Linux.
-  company: Midwestern Mac, LLC
-  license: license (BSD, MIT)
-  min_ansible_version: '2.0'
+  description: 'Apache 2.4+ PHP-FPM support for Linux.'
+  license: 'license (BSD, MIT)'
+  company: 'Midwestern Mac, LLC'
+  min_ansible_version: '2.0
   platforms:
     - name: EL
       versions:
@@ -25,3 +22,4 @@ galaxy_info:
     - php
     - cgi
     - phpfpm
+dependencies: []
