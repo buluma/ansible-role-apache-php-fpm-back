@@ -28,6 +28,13 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 
 - pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-apache-php-fpm-back/blob/master/requirements.txt).
 
+## [State of used roles](#state-of-used-roles)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[geerlingguy.apache](https://galaxy.ansible.com/buluma/geerlingguy.apache)|[![Build Status GitHub](https://github.com/buluma/geerlingguy.apache/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/geerlingguy.apache/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/geerlingguy.apache/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/geerlingguy.apache)|
 
 ## [Dependencies](#dependencies)
 

@@ -2,6 +2,8 @@ dependencies:
 - geerlingguy.apache
 galaxy_info:
   author: geerlingguy
+  role_name: apache_php_fpm_back
+  namespace: geerlingguy
   description: Apache 2.4+ PHP-FPM support for Linux.
   company: Midwestern Mac, LLC
   license: license (BSD, MIT)
