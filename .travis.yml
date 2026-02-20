@@ -5,16 +5,16 @@ env:
   - distro: centos7
     init: /usr/lib/systemd/systemd
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
-#  - distro: ubuntu1604
-#    init: /lib/systemd/systemd
-#    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+  #  - distro: ubuntu1604
+  #    init: /lib/systemd/systemd
+  #    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
   - distro: ubuntu1404
     init: /sbin/init
     run_opts: ""
 
 before_install:
   # Pull container.
-  - 'docker pull buluma/docker-${distro}-ansible:latest'
+  - "docker pull buluma/docker-${distro}-ansible:latest"
 
 script:
   - container_id=$(mktemp)
