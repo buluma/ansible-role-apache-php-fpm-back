@@ -1,12 +1,10 @@
----
-# For RedHat/CentOS, see notes in README.
-- name: Enable mod_proxy_fcgi.
-  ansible.builtin.file:
-    src: "{{ apache_server_root }}/mods-available/{{ item }}"
-    dest: "{{ apache_server_root }}/mods-enabled/{{ item }}"
+- ansible.builtin.file:
+    dest: '{{ apache_server_root }}/mods-enabled/{{ item }}'
+    src: '{{ apache_server_root }}/mods-available/{{ item }}'
     state: link
-  with_items:
-    - proxy.load
-    - proxy_fcgi.load
+  name: Enable mod_proxy_fcgi.
   notify: restart apache
   when: ansible_os_family == 'Debian'
+  with_items:
+  - proxy.load
+  - proxy_fcgi.load
