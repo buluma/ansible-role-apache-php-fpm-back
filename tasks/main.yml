@@ -1,11 +1,11 @@
 ---
-  - ansible.builtin.file:
-      dest: '{{ apache_server_root }}/mods-enabled/{{ item }}'
-      src: '{{ apache_server_root }}/mods-available/{{ item }}'
-      state: link
-    name: Enable mod_proxy_fcgi.
-    notify: restart apache
-    when: ansible_os_family == 'Debian'
-    with_items:
-      - proxy.load
-      - proxy_fcgi.load
+- ansible.builtin.file:
+    dest: '{{ apache_server_root }}/mods-enabled/{{ item }}'
+    src: '{{ apache_server_root }}/mods-available/{{ item }}'
+    state: link
+  name: Enable mod_proxy_fcgi.
+  notify: restart apache
+  when: ansible_os_family == 'Debian'
+  with_items:
+  - proxy.load
+  - proxy_fcgi.load

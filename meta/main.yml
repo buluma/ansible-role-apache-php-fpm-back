@@ -5,21 +5,21 @@ galaxy_info:
   company: Midwestern Mac, LLC
   description: Apache 2.4+ PHP-FPM support for Linux.
   galaxy_tags:
-    - web
-    - apache
-    - php
-    - cgi
-    - phpfpm
+  - web
+  - apache
+  - php
+  - cgi
+  - phpfpm
   license: license (BSD, MIT)
   min_ansible_version: '2.0'
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
+  - name: EL
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
   role_name: apache_php_fpm_back
