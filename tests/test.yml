@@ -1,3 +1,4 @@
+---
   - hosts: all
     name: Test apache-php-fpm-back role
     pre_tasks:
