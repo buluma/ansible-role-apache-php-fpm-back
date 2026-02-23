@@ -1,4 +1,4 @@
-- become: true
-  gather_facts: true
-  hosts: all
-  name: Converge
+  - become: true
+    gather_facts: true
+    hosts: all
+    name: Converge

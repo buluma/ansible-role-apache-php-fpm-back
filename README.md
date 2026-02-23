@@ -11,10 +11,10 @@ Apache 2.4+ PHP-FPM support for Linux.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-apache-php-fpm-back/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
-- become: true
-  gather_facts: true
-  hosts: all
-  name: Converge
+  - become: true
+    gather_facts: true
+    hosts: all
+    name: Converge
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.

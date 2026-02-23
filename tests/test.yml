@@ -1,17 +1,18 @@
-- hosts: all
-  name: Test apache-php-fpm-back role
-  pre_tasks:
-  - ansible.builtin.apt_repository:
-      repo: ppa:ondrej/php
-    name: Add repository for PHP 7.
-    when: ansible_distribution == 'Ubuntu' and ansible_distribution_version != '16.04'
-  roles:
-  - role: geerlingguy.apache
-  vars:
-    apache_create_vhosts: true
-    apache_listen_port_ssl: 443
-    apache_vhosts:
-    - documentroot: /var/www/vhosts/example_com
-      servername: example.com
-    apache_vhosts_filename: vhosts.conf
-    php_enablerepo: remi,remi-php56
+  - hosts: all
+    name: Test apache-php-fpm-back role
+    pre_tasks:
+      - ansible.builtin.apt_repository:
+          repo: ppa:ondrej/php
+        name: Add repository for PHP 7.
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version 
+          != '16.04'
+    roles:
+      - role: geerlingguy.apache
+    vars:
+      apache_create_vhosts: true
+      apache_listen_port_ssl: 443
+      apache_vhosts:
+        - documentroot: /var/www/vhosts/example_com
+          servername: example.com
+      apache_vhosts_filename: vhosts.conf
+      php_enablerepo: remi,remi-php56

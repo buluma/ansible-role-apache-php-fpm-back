@@ -1,2 +1,2 @@
 roles:
-- name: geerlingguy.apache
+  - name: geerlingguy.apache
