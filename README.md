@@ -12,10 +12,10 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- become: true
+- name: Converge
+  become: true
   gather_facts: true
   hosts: all
-  name: Converge
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
