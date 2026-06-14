@@ -5,7 +5,7 @@
     - name: Add repository for PHP 7.
       ansible.builtin.apt_repository:
         repo: ppa:ondrej/php
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version != '16.04'
+      when: ansible_facts.distribution == 'Ubuntu' and ansible_facts.distribution_version != '16.04'
   roles:
     - role: geerlingguy.apache
   vars:
