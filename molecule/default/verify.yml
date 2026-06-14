@@ -1,0 +1,15 @@
+---
+- name: Verify
+  hosts: all
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Check if apache is running
+      ansible.builtin.service_facts:
+
+    - name: Assert apache is active
+      ansible.builtin.assert:
+        that:
+          - "'apache2' in services or 'httpd' in services"
+        quiet: true
