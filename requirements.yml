@@ -1,3 +1,8 @@
 ---
 roles:
-  - name: geerlingguy.apache
+  - name: buluma.bootstrap
+  - name: buluma.epel
+  - name: buluma.python_pip
+  - name: buluma.httpd
+collections:
+  - name: community.general
