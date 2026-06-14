@@ -5,7 +5,7 @@
     src: "{{ apache_server_root }}/mods-available/{{ item }}"
     state: link
   notify: restart apache
-  when: ansible_facts.os_family == 'Debian'
+  when: ansible_facts['os_family'] == 'Debian'
   with_items:
     - proxy.load
     - proxy_fcgi.load
