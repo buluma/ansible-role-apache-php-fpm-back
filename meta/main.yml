@@ -1,7 +1,7 @@
 ---
 dependencies: []
 galaxy_info:
-  author: geerlingguy
+  author: buluma
   company: Midwestern Mac, LLC
   description: Apache 2.4+ PHP-FPM support for Linux.
   galaxy_tags:
@@ -11,7 +11,7 @@ galaxy_info:
     - cgi
     - phpfpm
   license: license (BSD, MIT)
-  min_ansible_version: "2.0"
+  min_ansible_version: "2.12"
   platforms:
     - name: EL
       versions:
