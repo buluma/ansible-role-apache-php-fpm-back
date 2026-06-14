@@ -2,7 +2,7 @@
 dependencies: []
 galaxy_info:
   author: buluma
-  company: Midwestern Mac, LLC
+  company: ShadowNet
   description: Apache 2.4+ PHP-FPM support for Linux.
   galaxy_tags:
     - web
